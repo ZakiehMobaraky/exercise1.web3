@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var Sunday;
+        var Monday;
+        var Tuesday;
+        var Wednesday;
+        var Thursday;
+        var Friday;
+
+        const d = new Date();
+        let day = weekday[d.getDay()];
+        if (day == 'Sunday') {
+            console.log('یکشنبه')
+            alert('امروز یکشنبه می باشد')
+        } else if (day == 'Monday') {
+            console.log('دوشنبه')
+            alert('امروز دوشنبه می باشد')
+        } else if (day == 'Tuesday') {
+            console.log('سه‌شنبه')
+            alert('امروز سه شنبه می باشد')
+        } else if (day == 'Wednesday') {
+            console.log('چهارشنبه')
+            alert('امروز چهارشنبه می باشد')
+        } else if (day == 'Thursday') {
+            console.log('پنچشنبه')
+            alert('امروز پنجشنبه می باشد')
+        } else if (day == 'Friday') {
+            console.log('جمعه')
+            alert('امروز جمعه می باشد')
+        } else {
+            console.log('شنبه')
+        }
+
+        //..........................................................
+
+        function addZero(i) {
+            if (i < 10) { i = "0" + i }
+            return i;
+        }
+
+        const z = new Date();
+        let h = addZero(z.getHours());
+        let m = addZero(z.getMinutes());
+        let s = addZero(z.getSeconds());
+        let time = h + ":" + m + ":" + s;
+        if(time>'05:00:00'&&time<'12:00:00'){
+            console.log( "%c%s","color:yellow","صبح شما بخیر")
+            alert('صبح شما بخیر، خوش آمدید')
+        }else if(time>'12:00:00'&&time<'16:00:00'){
+            console.log("%c%s","color:red","ظهر شما بخیر")
+            alert('ظهر شما بخیر، خوش آمدید')
+        }else if(time>'16:00:00'&&time<'19:00:00'){
+            console.log("%c%s","color:green","بعدازظهر شما بخیر")
+            alert('بعدازظهر شما بخیر، خوش آمدید')
+        }else if(time>'19:00:00'&&time<'23:00:00'){
+            console.log("%c%s","color:blue","شب شما بخیر")
+            alert('شب شما بخیر، خوش آمدید')
+        }else{
+            console.log('نیمه شب شما بخیر، خوش آمدید')
+            alert('نیمه شب شما بخیر، خوش آمدید')
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
